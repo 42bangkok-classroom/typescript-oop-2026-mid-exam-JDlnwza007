@@ -1,6 +1,6 @@
 export {};
-const rawPattern = process.argv.slice(2)
-const pattern = Number(rawPattern)
+const firstPattern = process.argv.slice(2)
+const pattern = Number(firstPattern)
 
 if (pattern > 0) {
     for (let i = 1; i <= pattern; i++) {
