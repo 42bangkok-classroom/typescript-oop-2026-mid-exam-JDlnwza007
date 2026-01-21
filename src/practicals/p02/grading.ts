@@ -9,7 +9,7 @@ if (isNaN(x) || x < 0 || x > 100) {
 } else if (x >= 60) {
     console.log("Grade is C");
 } else if (x >= 50) {
-    console.log("Garde is D");
+    console.log("Grade is D");
 } else {
     console.log("Grade is F");
 }
