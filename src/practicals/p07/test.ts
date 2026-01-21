@@ -3,18 +3,21 @@ export interface Person {
   lastName?: string;
   age?: number;
 }
-interface UserPerson {
+
+interface ValidPerson {
   firstName: string;
   lastName: string;
   age: number;
 }
 export function sortPersons(persons: Person[]): Person[] {
-    const name = persons.filter(person => person.firstName)
-    const lastname = name.filter(person => person.lastName)
-    const age = lastname.filter(person => person.age && (person.age >= 0 && person.age <= 100)) as UserPerson[]
-    const srt = age.sort((i, u) => u.age - i.age && i.firstName?.localeCompare(u.firstName) && i.lastName?.localeCompare(u.lastName))
-    return srt as Person[]
-  }
+  const nameFilter = persons.filter(person => person.firstName)
+  const lastFilter = nameFilter.filter(person => person.lastName)
+  const ageFilter = lastFilter.filter(person => person.age && (person.age >= 0 && person.age <= 100)) as ValidPerson[]
+  const sorted = ageFilter.sort((a, b) => b.age - a.age && a.firstName?.localeCompare(b.firstName) && a.lastName?.localeCompare(b.lastName))
+  return sorted as Person[]
+}
+
+
 const persons: Person[] = [
   { firstName: "Somchai", lastName: "Jaidee", age: 30 },
   { firstName: "", lastName: "Test", age: 20 },
