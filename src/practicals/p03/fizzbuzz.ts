@@ -14,6 +14,6 @@ const score =Number(process.argv[2]);
         } 
 
         else {
-            console.log(i.toString());
+            console.log(i);
         }
     }
