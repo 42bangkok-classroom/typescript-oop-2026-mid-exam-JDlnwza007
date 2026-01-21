@@ -12,6 +12,7 @@ export const answers = {
   "c06": "C",
   "c07": "B",
   "c08": "A",
+  "c09": "A",
   "c10": "C",
   "c11": "C",
   "c12": "B",
